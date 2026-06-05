@@ -1,0 +1,25 @@
+# Dies ist ein Kommentar. Das Objekt hat 5 Eckpunkte (Vertices).
+# Format: v x y z
+v 0.0 1.0 0.0    # 1: Die Spitze der Pyramide (oben in der Mitte)
+v -1.0 0.0 1.0   # 2: Ecke vorne links
+v 1.0 0.0 1.0    # 3: Ecke vorne rechts
+v 1.0 0.0 -1.0   # 4: Ecke hinten rechts
+v -1.0 0.0 -1.0  # 5: Ecke hinten links
+
+# Jetzt kommen die Normalenvektoren (wichtig für die Beleuchtung!).
+# Sie zeigen an, in welche Richtung eine Fläche oder ein Punkt "guckt".
+# Format: vn x y z
+vn 0.0 1.0 0.0   # Zeigt nach oben
+vn 0.0 0.0 1.0   # Zeigt nach vorne
+
+# Nun werden die Punkte zu Flächen (Faces) verbunden.
+# Die Zahlen beziehen sich auf die Reihenfolge der "v"-Einträge oben (beginnend bei 1).
+# Format: f punkt1 punkt2 punkt3
+f 1 2 3          # Dreieck vorne (Spitze + vorne links + vorne rechts)
+f 1 3 4          # Dreieck rechts
+f 1 4 5          # Dreieck hinten
+f 1 5 2          # Dreieck links
+
+# Die quadratische Bodenfläche besteht aus zwei Dreiecken:
+f 2 4 3
+f 2 5 4
